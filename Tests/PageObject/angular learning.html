@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Learning</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <input type="text" data-ng-model="firstName">
+    <input type="text" data-ng-model="lastName">
+    <h1>Angular learning</h1>
+    <h2>code test </h2>
+    <p>Your Name is  {{firstName + " " + lastName}} </p>
+    <h3>Expressions <span data-ng-bind="5+5"></span></h3>
+</div>
+
+<script>
+
+    var app=angular.module('myApp', []);
+    app.controller("myCtrl", function($scope) {
+        $scope.firstName = "Arslan";
+        $scope.lastName = "Gul";
+    });
+</script>
+</body>
+</html>

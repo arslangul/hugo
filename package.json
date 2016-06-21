@@ -1,0 +1,11 @@
+{
+  "name": "hugo",
+  "private": true,
+  "devDependencies": {
+    "mysql": "^2.11.1",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.1"
+  },
+  "dependencies": {
+    "phantom": "^2.1.5"
+  }
+}

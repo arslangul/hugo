@@ -1,0 +1,64 @@
+<html><head><meta charset="utf-8"><style>body { font-family: Arial; }ul { list-style-position: inside; }span.passed { padding: 0 1em; color: green; }span.failed { padding: 0 1em; color: red; }span.pending { padding: 0 1em; color: orange; }span.stacktrace { white-space: pre; border: 1px solid rgb(0, 0, 0); font-size: 9pt; padding: 4px; background-color: rgb(204, 204, 204); }</style><script type="text/javascript">function showhide(id) {var e = document.getElementById(id);e.style.display = (e.style.display == "block") ? "none" : "block";}function buildQuickLinks() {var failedSpecs = document.querySelectorAll("li.failed");var quickLinksContainer = document.getElementById("quickLinks");for (var i = 0; i < failedSpecs.length; ++i) {var li = document.createElement("li");var a = document.createElement("a");a.href = "#" + failedSpecs[i].id;a.textContent = failedSpecs[i].dataset.name + "  (" + failedSpecs[i].dataset.browser + ")";li.appendChild(a);quickLinksContainer.appendChild(li);}}function updatePassCount() {var totalPassed = document.querySelectorAll("li.passed").length;var totalFailed = document.querySelectorAll("li.failed").length;var totalSpecs = totalFailed + totalPassed;console.log("passed: %s, failed: %s, total: %s", totalPassed, totalFailed, totalSpecs);document.getElementById("summaryTotalSpecs").textContent = document.getElementById("summaryTotalSpecs").textContent + totalSpecs;document.getElementById("summaryTotalFailed").textContent = document.getElementById("summaryTotalFailed").textContent + totalFailed;if (totalFailed) {document.getElementById("summary").className = "failed";}}function start() {updatePassCount();buildQuickLinks();}window.onload = start;</script></head><body><h1>Report</h1><div id="summary" class="passed"><h4>Summary</h4><ul><li id="summaryTotalSpecs">Total specs tested: </li><li id="summaryTotalFailed">Total failed: </li></ul></div><ul style="list-style-type:none"><h4>hugo (47 s)</h4><li id="a102e030-347f-11e6-ad2f-0fac9e6f29c6" class="passed" data-spec="spec0" data-name="Open Browser" data-browser="chrome"><span class="passed">&#10003;</span><a href="f8757318f6e1fa4212b5946eb69b8726.png">Open Browser</a>(17 s)</li><li id="a1035560-347f-11e6-ad2f-0fac9e6f29c6" class="passed" data-spec="spec1" data-name="Login Credential" data-browser="chrome"><span class="passed">&#10003;</span><a href="9e009970cc30aa807f138ac99f8418a9.png">Login Credential</a>(10 s)</li><li id="a1035561-347f-11e6-ad2f-0fac9e6f29c6" class="passed" data-spec="spec2" data-name="Add Timeline" data-browser="chrome"><span class="passed">&#10003;</span><a href="e3b3709102cf1fe16e6d19687e33349d.png">Add Timeline</a>(15 s)</li><li id="a1035562-347f-11e6-ad2f-0fac9e6f29c6" class="failed" data-spec="spec3" data-name="SignOut" data-browser="chrome"><span class="failed">&#10007;</span><a href="3d3d46ca2baa465fa4983ddcfad5e264.png">SignOut</a>(4 s)<ul><li>Failed: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text() = &#39;Sign Out&#39;]&quot;}
+  (Session info: chrome=51.0.2704.84)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 46 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &#39;2.52.0&#39;, revision: &#39;4c2593c&#39;, time: &#39;2016-02-11 19:06:42&#39;
+System info: host: &#39;Arslan-PC&#39;, ip: &#39;192.168.0.176&#39;, os.name: &#39;Windows 7&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;6.1&#39;, java.version: &#39;1.8.0_51&#39;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\Arsalam\AppData\Local\Temp\scoped_dir5040_9956}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 52682b63fb524a539025b8416cae7c1d
+*** Element info: {Using=xpath, value=//span[text() = &#39;Sign Out&#39;]} [<a href="javascript:showhide('spec30')">stack</a>]<br/><span style="display: none" id="spec30" class="stacktrace">NoSuchElementError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text() = &#39;Sign Out&#39;]&quot;}
+  (Session info: chrome=51.0.2704.84)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 46 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &#39;2.52.0&#39;, revision: &#39;4c2593c&#39;, time: &#39;2016-02-11 19:06:42&#39;
+System info: host: &#39;Arslan-PC&#39;, ip: &#39;192.168.0.176&#39;, os.name: &#39;Windows 7&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;6.1&#39;, java.version: &#39;1.8.0_51&#39;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\Arsalam\AppData\Local\Temp\scoped_dir5040_9956}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 52682b63fb524a539025b8416cae7c1d
+*** Element info: {Using=xpath, value=//span[text() = &#39;Sign Out&#39;]}
+    at WebDriverError (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\error.js:26:26)
+    at NoSuchElementError (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\error.js:229:26)
+    at Object.checkLegacyResponse (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\error.js:580:13)
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:360:15
+    at Promise.invokeCallback_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1329:14)
+    at TaskQueue.execute_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2790:14)
+    at TaskQueue.executeNext_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2773:21)
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2652:27
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+    at process._tickCallback (node.js:405:9)
+From: Task: WebElement.click()
+    at WebDriver.schedule (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:344:17)
+    at WebElementPromise.schedule_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:1712:25)
+    at WebElementPromise.click (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:1808:17)
+    at Object.&lt;anonymous&gt; (C:\Users\Arsalam\Documents\Hugo\Tests\MobileApp\spec.js:74:32)
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:96:23
+    at new Promise (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1043:7)
+    at controlFlowExecute (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:82:18)
+    at TaskQueue.execute_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2790:14)
+    at TaskQueue.executeNext_ (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2773:21)
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2652:27
+From: Task: Run it(&quot;SignOut&quot;) in control flow
+    at Object.&lt;anonymous&gt; (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:81:14)
+    at attemptAsync (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1916:24)
+    at QueueRunner.run (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1871:9)
+    at QueueRunner.execute (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1859:10)
+    at Spec.Env.queueRunnerFactory (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:697:35)
+    at Spec.execute (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:359:10)
+    at Object.fn (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:2479:37)
+    at attemptAsync (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1916:24)
+    at QueueRunner.run (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1871:9)
+    at c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1898:16
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\Arsalam\Documents\Hugo\Tests\MobileApp\spec.js:72:5)
+    at addSpecsToSuite (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:833:25)
+    at Env.describe (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:802:7)
+    at jasmineInterface.describe (c:\Users\Arsalam\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:3375:18)
+    at Object.&lt;anonymous&gt; (C:\Users\Arsalam\Documents\Hugo\Tests\MobileApp\spec.js:4:1)
+    at Module._compile (module.js:398:26)
+    at Object.Module._extensions..js (module.js:405:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)</span></li></ul></li></ul><a href="javascript:showhide('a103f1a0-347f-11e6-ad2f-0fac9e6f29c6')">Toggle Configuration</a><div class="config" id="a103f1a0-347f-11e6-ad2f-0fac9e6f29c6" style="display: none"><h4>Configuration</h4><li>Jasmine version:  2.4.1</li><li>Browser name:  chrome</li><li>Browser version:  51.0.2704.84</li><li>Platform:  XP</li><li>Javascript enabled:  true</li><li>Css selectors enabled:  true</li></div></body></html>
