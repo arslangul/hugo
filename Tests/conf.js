@@ -67,6 +67,14 @@ exports.config = {
             reporter.afterLaunch(resolve.bind(this, exitCode));
         });
     },
+    onPrepare: function() {
+        // The require statement must be down here, since jasmine-reporters
+        // needs jasmine to be in the global and protractor does not guarantee
+        // this until inside the onPrepare function.
+        require('jasmine-reporters');
+        jasmine.getEnv().addReporter(
+            new jasmine.JUnitXmlReporter('xmloutput', true, true));
+    },
     params: {
         admin: 'admin@hugophr.com',
         patient: 'test@gmail.com',
