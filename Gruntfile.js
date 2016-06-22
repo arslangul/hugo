@@ -70,6 +70,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-qunit-cov');
 
     grunt.registerTask('default', ['jshint', 'testem', 'clean']);
-    grunt.registerTask('jenkins', ['jshint', 'testem', 'clean' ]);
+    grunt.registerTask('jenkins', ['jshint', 'testem', 'clean','qunit-cov' ]);
   // ... 
 };
