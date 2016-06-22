@@ -85,7 +85,7 @@ describe('hugo', function() {
         Login.study.saveButton.click();
         console.log("Study has been added");
 
-    });*/
+    });
     it('edit Study', function () {
         Login.sidebar.studyMgmt.click();
         browser.sleep(1000);
@@ -107,8 +107,8 @@ describe('hugo', function() {
         Login.editStudy.saveButton.click();
         console.log("Study has been Edited");
 
-    });
-    /*it('organization', function () {
+    });*/
+    it('organization', function () {
         browser.sleep(1000);
         Login.sidebar.organizationMgmt.click();
         browser.sleep(2000);
@@ -122,7 +122,7 @@ describe('hugo', function() {
         Login.organization.description.sendKeys('This is description');
 
     });
-    it('Edit organization', function () {
+    /* it('Edit organization', function () {
 
         browser.sleep(2000);
         Login.sidebar.organizationMgmt.click();
