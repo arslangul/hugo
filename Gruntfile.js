@@ -32,23 +32,7 @@ module.exports = function(grunt) {
 
 
       },
-      protractor_webdriver: {
-          target: {
-              options: {
-                  path: 'node_modules/protractor/bin/',
-                  command: 'webdriver-manager start'
-              }
-          }
-      },
-      protractor: {
 
-          target: {
-              options: {
-                  configFile: "Tests/conf.js", // Target-specific config file
-                  args: {} // Target-specific arguments
-              }
-          }
-      },
       "qunit-cov": {
           test: {
               minimum: 0.9,
@@ -59,10 +43,6 @@ module.exports = function(grunt) {
       }
   });
 
-    grunt.registerTask('p:test', [
-        'protractor_webdriver',
-        'protractor'
-    ]);
   grunt.loadNpmTasks('grunt-jenkins');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-testem');
