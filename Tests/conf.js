@@ -67,7 +67,6 @@ exports.config = {
             reporter.afterLaunch(resolve.bind(this, exitCode));
         });
     },
-
     params: {
         admin: 'admin@hugophr.com',
         patient: 'test@gmail.com',
