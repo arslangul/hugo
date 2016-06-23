@@ -10,7 +10,7 @@ describe('hugo', function() {
         browser.sleep(10000);
     });
     it('Login Credential', function () {
-        browser.sleep(10000);
+        browser.sleep(1000);
         Login.login.typeName(params.config.params.admin);
         Login.login.typePassword(params.config.params.password);
         Login.login.loginButton.click();
@@ -19,26 +19,27 @@ describe('hugo', function() {
         console.log("Admin Login Successful");
 
     });
-/*it('Add user', function () {
+it('Add user', function () {
         Login.sidebar.userMgmt.click();
         Login.addUser.addUserButton.click();
         browser.sleep(1000);
-        expect(browser.driver.getCurrentUrl()).toContain(page.addUserUrl);
+        expect(browser.driver.getCurrentUrl()).toContain(Login.links.addUserUrl);
         console.log("Add User Page");
         browser.sleep(5000);
         Login.addUser.title.sendKeys(params.config.addUser.title);
         Login.addUser.email.sendKeys(params.config.addUser.email);
         Login.addUser.firstName.sendKeys(params.config.addUser.firstName);
         Login.addUser.lastName.sendKeys(params.config.addUser.lastName);
-        Login.addUser.dropdown1.click();
+        browser.sleep(2000);
+        /*Login.addUser.dropdown1.click();
         Login.addUser.dropdown1select.click();
         Login.addUser.dropdown2.click();
         Login.addUser.dropdown2select.click();
-        Login.addUser.nextButton.click();
+        //Login.addUser.nextButton.click();*/
         console.log("user added");
     });
 
-    it('Activating User Account',function(done){
+    /*it('Activating User Account',function(done){
         sql = "UPDATE users set active = 1";
 
         connectDatabase.connection..query(sql, function(err, rows, fields) {
@@ -61,7 +62,44 @@ describe('hugo', function() {
             done(err);
         });
     });
+*/
+    it('organization', function () {
+        browser.sleep(1000);
+        Login.sidebar.organizationMgmt.click();
+        browser.sleep(2000);
+        expect(browser.driver.getCurrentUrl()).toContain(Login.links.organizationsUrl);
+        Login.organization.addButton.click();
+        browser.sleep(3000);
+        expect(browser.driver.getCurrentUrl()).toContain(Login.links.addOrgUrl);
+        Login.organization.orgName.sendKeys('organization 5');
+        Login.organization.statusDD.click();
+        browser.sleep(1000);
+        Login.organization.statusActive.click();
+        browser.sleep(1000);
+        Login.organization.description.sendKeys('This is description');
+        console.log("Organization has been added");
 
+    });
+    it('Edit organization', function () {
+
+        browser.sleep(2000);
+        Login.sidebar.organizationMgmt.click();
+        browser.sleep(1000);
+        expect(browser.driver.getCurrentUrl()).toContain(Login.links.organizationsUrl);
+        browser.sleep(1000);
+        Login.editOrg.edit.click();
+        browser.sleep(1000);
+        Login.organization.orgName.clear();
+        Login.organization.orgName.sendKeys('organization5');
+        Login.organization.statusDD.click();
+        browser.sleep(1000);
+        Login.organization.statusInactive.click();
+        browser.sleep(1000);
+        Login.organization.description.clear();
+        Login.organization.description.sendKeys('This is edited description');
+        // Login.editOrg.updateButton.click();
+        console.log("Organization has been Edited");
+    });
     it('Add Study', function () {
         browser.sleep(2000);
         Login.sidebar.studyMgmt.click();
@@ -81,8 +119,7 @@ describe('hugo', function() {
         browser.sleep(1000);
         Login.study.researcher.sendKeys('user');
         Login.study.autoRes.click();
-
-        Login.study.saveButton.click();
+        //Login.study.saveButton.click();
         console.log("Study has been added");
 
     });
@@ -104,48 +141,18 @@ describe('hugo', function() {
         Login.editStudy.effectiveDate.sendKeys('6/22/2016');
         Login.editStudy.expiryDate.sendKeys('6/29/2016');
         Login.editStudy.description.sendKeys('Hello Hey');
-        Login.editStudy.saveButton.click();
+        //Login.editStudy.saveButton.click();
         console.log("Study has been Edited");
 
-    });*/
-    it('organization', function () {
-        browser.sleep(1000);
-        Login.sidebar.organizationMgmt.click();
-        browser.sleep(2000);
-        expect(browser.driver.getCurrentUrl()).toContain(Login.links.organizationsUrl);
-        Login.organization.addButton.click();
-        browser.sleep(3000);
-        expect(browser.driver.getCurrentUrl()).toContain(Login.links.addOrgUrl);
-        Login.organization.orgName.sendKeys('organization 5');
-        Login.organization.statusDD.click();
-        Login.organization.statusActive.click();
-        Login.organization.description.sendKeys('This is description');
-
     });
-    /* it('Edit organization', function () {
 
-        browser.sleep(2000);
-        Login.sidebar.organizationMgmt.click();
-        browser.sleep(1000);
-        expect(browser.driver.getCurrentUrl()).toContain(Login.links.organizationsUrl);
-        browser.sleep(1000);
-        Login.editOrg.edit.click();
-        browser.sleep(1000);
-        Login.organization.orgName.clear();
-        Login.organization.orgName.sendKeys('organization5');
-        Login.organization.statusDD.click();
-        Login.organization.statusInactive.click();
-        Login.organization.description.sendKeys('This is edited description');
-        Login.editOrg.updateButton.click();
-
-    });*/
     it('Logout', function () {
+        browser.sleep(2000);
+        Login.login.logoutMenu.click();
+        browser.sleep(2000);
+        Login.login.logoutButton.click();
         browser.sleep(1000);
-        Login.links.logoutMenu.click();
-        browser.sleep(1000);
-        Login.links.logoutButton.click();
-        browser.sleep(1000);
-        expect(browser.driver.getCurrentUrl()).toContain(page.loginUrl);
+        expect(browser.driver.getCurrentUrl()).toContain(Login.links.loginUrl);
         console.log("Admin Logout Successful");
     });
 });

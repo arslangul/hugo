@@ -39,10 +39,10 @@ exports.config = {
 
     ],
 
-    capabilities: {
+    /*capabilities: {
         browserName: 'phantomjs',
         debug: true
-    },
+    },*/
     allScriptsTimeout: 500000,
     jasmineNodeOpts: {
         showColors: true,

@@ -6,8 +6,8 @@ hugo.login = Object.create({}, {
     userName: { get: function () { return browser.driver.findElement(by.id('txtUserName')); }},
     password: { get: function () { return browser.driver.findElement(by.id('txtPassword')); }},
     loginButton: { get: function () { return browser.driver.findElement(By.id("btnLogin")); }},
-    logoutMenu: { get: function () { return browser.driver.findElement(By.xpath("//span[text() = 'Sign Out']")); }},
-    logoutButton: { get: function () { return browser.driver.findElement(By.xpath('/html/body/div[3]/md-menu-content/md-menu-item/button')); }},
+    logoutMenu: { get: function () { return browser.driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/md-sidenav/div/md-content/md-menu-bar/md-menu/a/div/h3")); }},
+    logoutButton: { get: function () { return browser.driver.findElement(By.xpath('/html/body/div[4]/md-menu-content/md-menu-item/button')); }},
     typeName: { value: function (keys) { return this.userName.sendKeys(keys); }},
     typePassword: { value: function (keys) { return this.password.sendKeys(keys); }}
 
@@ -36,9 +36,9 @@ hugo.study = Object.create({}, {
     expiryDate: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[2]/div[2]/md-datepicker/div[1]/input')); }},
     description: { get: function () { return  browser.driver.findElement(By.xpath('//textarea[starts-with(@id,"input_")][1]')); }},
     organization: { get: function () { return  browser.driver.findElement(By.xpath('//input[starts-with(@id,"input-")][1]')); }},
-    autoOrg: {get: function(){return browser.driver.findElement(By.xpath('/html/body/md-virtual-repeat-container[1]/div/div[2]/ul/li[1]/md-autocomplete-parent-scope/span'));}},
-    researcher: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[6]/md-chips/md-chips-wrap/div/md-autocomplete/md-autocomplete-wrap/input')); }},
-    autoRes: {get: function(){return browser.driver.findElement(By.xpath('/html/body/md-virtual-repeat-container[2]/div/div[2]/ul/li[1]/md-autocomplete-parent-scope/span'));}},
+    autoOrg: {get: function(){return browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[4]/md-chips/md-chips-wrap/div/md-autocomplete'));}},
+    researcher: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div/div/div/div[2]/md-content/div[2]/md-content/div/form/div[6]/md-chips/md-chips-wrap/div/md-autocomplete/md-autocomplete-wrap/input')); }},
+    autoRes: {get: function(){return browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[6]/md-chips/md-chips-wrap/div/md-autocomplete'));}},
     saveButton: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[7]/button[1]')); }}
 
 });
@@ -61,8 +61,8 @@ hugo.organization=Object.create({},{
     addButton: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div/div/div/div[2]/md-content/div[2]/md-content/md-toolbar/button')); }},
     orgName: { get: function () { return  browser.driver.findElement(By.xpath('//input[starts-with(@id,"input_")][1]')); }},
     statusDD: { get: function () { return  browser.driver.findElement(By.xpath('//md-select-value[starts-with(@id,"select_value_label_")][1]')); }},
-    statusActive: { get: function () { return  browser.driver.findElement(By.xpath('//md-option[starts-with(@id,"select_option_")][1]')); }},
-    statusInactive: { get: function () { return  browser.driver.findElement(By.xpath('//md-option[starts-with(@id,"select_option_")][2]')); }},
+    statusActive: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[3]/md-select-menu/md-content/md-option[1]')); }},
+    statusInactive: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[3]/md-select-menu/md-content/md-option[2]')); }},
     description: { get: function () { return  browser.driver.findElement(By.xpath('//textarea[starts-with(@id,"input_")][1]')); }},
     saveButton: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/md-content/div[2]/md-content/div/form/div[3]/button[1]')); }}
 });
