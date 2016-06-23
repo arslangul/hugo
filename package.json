@@ -2,6 +2,13 @@
   "name": "hugo",
   "private": true,
   "devDependencies": {
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-requirejs": "^1.0.0",
+    "karma-safari-launcher": "^1.0.0",
     "mysql": "^2.11.1",
     "protractor-jasmine2-screenshot-reporter": "^0.3.1"
   },
