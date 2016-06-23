@@ -73,7 +73,7 @@ hugo.editOrg=Object.create({},{
 
 });
 hugo.sidebar = Object.create({}, {
-    userMgmt: { get: function () { return  browser.driver.findElement(By.xpath('//button[text() = "USER  Management"]')); }},
+    userMgmt: { get: function () { return  browser.driver.findElement(By.xpath('/html/body/div/div/div/div[1]/md-sidenav/md-content/md-list[1]/md-list-item/button')); }},
     studyMgmt: { get: function () {return  browser.driver.findElement(By.xpath('/html/body/div/div/div/div[1]/md-sidenav/md-content/md-list[3]/md-list-item/button'));}},
     organizationMgmt: { get: function () {return  browser.driver.findElement(By.xpath('/html/body/div/div/div/div[1]/md-sidenav/md-content/md-list[2]/md-list-item/button'));}},
     addUserButton: { get: function () {  return browser.driver.findElement(By.xpath("/html/body/div/div/div/div[2]/md-content/div[2]/md-content/md-toolbar/button"));}}
