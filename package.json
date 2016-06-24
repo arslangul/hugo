@@ -6,13 +6,35 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-qunit": "^1.0.0",
     "karma-requirejs": "^1.0.0",
     "karma-safari-launcher": "^1.0.0",
     "mysql": "^2.11.1",
-    "protractor-jasmine2-screenshot-reporter": "^0.3.1"
+    "protractor-jasmine2-screenshot-reporter": "^0.3.1",
+    "requirejs": "^2.2.0"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
     "phantom": "^2.1.5"
-  }
+  },
+  "version": "1.0.0",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arslangul/hugo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arslangul/hugo/issues"
+  },
+  "homepage": "https://github.com/arslangul/hugo",
+  "description": ""
 }

@@ -1,4 +1,4 @@
-describe('hugo', function() {
+/*describe('hugo', function() {
 
     it('get browser', function () {
         browser.driver.get('https://app-qa.hugo.healthcare/#/login');
@@ -17,7 +17,7 @@ describe('hugo', function() {
         browser.driver.findElement(by.id('txtUserName')).clear();
         browser.driver.findElement(by.id('txtUserName')).sendKeys('test@gmail.com');
         browser.driver.findElement(by.xpath('/html/body/div/div/div/div[1]/div/form/div[3]/div/button')).click();
-        browser.driver.get('https://app-qa.hugo.healthcare/#/login');*/
+        browser.driver.get('https://app-qa.hugo.healthcare/#/login');
     });
     it('Login Credential1', function () {
         browser.driver.findElement(by.id('txtUserName')).sendKeys('admin@hugophr.com');
@@ -85,7 +85,7 @@ describe('hugo', function() {
 
         console.log("View Study");
     });
-    /*it('Edit Organization', function () {
+   it('Edit Organization', function () {
         browser.sleep(3000);
         var xyz=browser.driver.findElement(By.xpath('//tr[@class="md-row ng-scope"]//td[./text() = "organization2"]')).click();
         browser.sleep(3000);
@@ -104,5 +104,9 @@ describe('hugo', function() {
         /*var text=browser.driver.findElement(By.xpath("/html/body/div/div/div/div[2]/md-content/div[2]/md-content/md-toolbar/md-table-container/table/tbody/tr[3]/td[2]")).getText();
         expect(text).toContain('This is new Demo Organization');
     });*/
-
-});
+    describe('Users factory', function() {
+        it('has a dummy spec to test 2 + 2', function() {
+            // An intentionally failing test. No code within expect() will never equal 4.
+            expect().toEqual(4);
+        });
+    });
